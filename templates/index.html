@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STER-I-NAV | Gesture Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">STER-I-NAV</div>
+        <div class="status-pills">
+            <div class="pill live">System Live</div>
+            <div id="fps-pill" class="pill">FPS: --</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="video-section">
+            <img id="video-feed" src="{{ url_for('video_feed') }}" alt="Camera Feed">
+            
+            <div id="lock-overlay" class="lock-status">
+                SYSTEM LOCKED
+            </div>
+
+            <div class="overlay-info">
+                <div class="mode-badge" id="mode-display">INITIALIZING...</div>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <div class="card">
+                <h3>Performance</h3>
+                <div class="metric">
+                    <span id="fps-value" class="metric-value">0</span>
+                    <span class="metric-unit">frames/sec</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Active Control</h3>
+                <div id="gesture-status" style="font-size: 1.1rem; color: #fff; margin-top: 10px;">
+                    Awaiting hand detection...
+                </div>
+            </div>
+
+            <div class="card gesture-guide">
+                <h3>Gesture Mapping</h3>
+                <div class="gesture-item">
+                    <span class="gesture-name">Cursor Move</span>
+                    <span class="gesture-hand">Index Up</span>
+                </div>
+                <div class="gesture-item">
+                    <span class="gesture-name">Left Click</span>
+                    <span class="gesture-hand">Pinch (Index+Thumb)</span>
+                </div>
+                <div class="gesture-item">
+                    <span class="gesture-name">Move Slice</span>
+                    <span class="gesture-hand">Index+Thumb (Hold)</span>
+                </div>
+                <div class="gesture-item">
+                    <span class="gesture-name">Rotate 3D</span>
+                    <span class="gesture-hand">Middle+Thumb (Hold)</span>
+                </div>
+                <div class="gesture-item">
+                    <span class="gesture-name">Zoom In/Out</span>
+                    <span class="gesture-hand">Two Hands</span>
+                </div>
+                <div class="gesture-item">
+                    <span class="gesture-name">Voice Typing</span>
+                    <span class="gesture-hand">Pinky Up</span>
+                </div>
+                <div class="gesture-item">
+                    <span class="gesture-name">Toggle Lock</span>
+                    <span class="gesture-hand">Fist (Hold 1.5s)</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        &copy; 2026 STER-I-NAV Interface. Advanced Dental Navigation System.
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

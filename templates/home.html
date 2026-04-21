@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STER-I-NAV | Welcome</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="home-page">
+    <div class="background-decor"></div>
+    
+    <header style="border: none; background: transparent;">
+        <!-- Hidden branding for a clean landing page -->
+    </header>
+
+    <main class="home-hero">
+        <div class="hero-centerpiece">
+            <div class="hero-logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="STER-I-NAV Logo">
+            </div>
+            <h1>STER-I-NAV</h1>
+            <span class="sub-heading">PRECISION CONTROL. ZERO CONTACT.</span>
+        </div>
+        
+        <div class="hero-actions">
+            <a href="{{ url_for('dashboard') }}" class="cta-button">
+                <span class="btn-text">ENGAGE SYSTEM</span>
+                <span class="btn-glow"></span>
+            </a>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <span class="icon">🔒</span>
+                <h4>Sterile Safety</h4>
+                <p>Prevent cross-contamination with advanced gesture control.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">⚡</span>
+                <h4>Instant Latency</h4>
+                <p>Real-time tracking for smooth medical imaging control.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">🗣️</span>
+                <h4>Voice Enabled</h4>
+                <p>Integrated dictation for effortless charting.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 STER-I-NAV. Advanced Dental Navigation System.
+    </footer>
+</body>
+</html>
